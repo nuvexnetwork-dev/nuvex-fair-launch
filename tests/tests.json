@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Configure a valid fair launch and preview capped allocation",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "fair-launch configuration",
+      "allocation preview",
+      "wallet-cap calculation"
+    ],
+    "expected": "Allocation totals 100%, public pool is 70% of supply, and wallet ceiling is 2% of the public pool."
+  },
+  {
+    "name": "Block an invalid allocation policy",
+    "viewport": "mobile",
+    "covers": [
+      "allocation validation",
+      "invalid launch guardrail"
+    ],
+    "expected": "A visible validation message states that allocation must total exactly 100% and no launch transaction is created."
+  },
+  {
+    "name": "Inspect the deterministic allocation proof",
+    "viewport": "desktop",
+    "covers": [
+      "allocation proof",
+      "oversubscription math",
+      "deterministic allocation"
+    ],
+    "expected": "The proof screen shows requested versus final allocations and identifies capped-pro-rata-v1 as deterministic."
+  },
+  {
+    "name": "Verify the policy proof directly against Devnet",
+    "viewport": "desktop",
+    "covers": [
+      "on-chain proof verification",
+      "memo transaction verification",
+      "Devnet audit trail"
+    ],
+    "expected": "The confirmed transaction is read and the on-chain memo matches the committed policy proof."
+  },
+  {
+    "name": "Show Devnet transaction verification state",
+    "viewport": "desktop",
+    "covers": [
+      "Solana Devnet launch",
+      "on-chain proof receipt",
+      "transaction explorer link"
+    ],
+    "expected": "The app exposes the proof hash, mint address and Solana Explorer transaction link."
+  }
+]
