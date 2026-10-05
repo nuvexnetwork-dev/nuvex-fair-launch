@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "0.32.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+nuvex_fair_launch = "4S92Ldnxea8FbFW3f2BaofVfqMDUbjScoq5Ks7tdKp19"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "anchor test"
